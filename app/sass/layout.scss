@@ -1,0 +1,43 @@
+// @import 'reset';
+
+
+@import 'config';
+
+
+html{
+	background-color: $bg;
+	color: $linkColor;
+}
+@mixin flex($num){
+	-webkit-box-flex: $num;
+		-webkit-flex: $num;
+	   -moz-box-flex: $num;
+	       -moz-flex: $num;
+	        -ms-flex: $num;
+				flex: $num;
+}
+@mixin box-sizing ($sizing) {
+    -webkit-box-sizing:$sizing;     
+       -moz-box-sizing:$sizing;
+            box-sizing:$sizing;
+}
+
+.flx{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.box-border{
+    border:1px solid #ccc;
+    @include box-sizing(border-box);
+}
+
+.f1{
+	@include flex(1);
+	display: block;
+	padding: 4px 8px;
+}
