@@ -1,12 +1,11 @@
-// @import 'reset';
 
-
-@import 'config';
-
-
-html{
-	background-color: $bg;
-	color: $linkColor;
+@mixin display{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 @mixin flex($num){
 	-webkit-box-flex: $num;
@@ -16,28 +15,83 @@ html{
 	        -ms-flex: $num;
 				flex: $num;
 }
+
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+  	   -moz-flex-direction: $direction;
+  		-ms-flex-direction: $direction;
+  			flex-direction: $direction;
+}
+@mixin flex-wrap($wrap){
+	  -ms-flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+@mixin justify-content($content){
+		   -webkit-box-pack: $content;
+		  	  -ms-flex-pack: $content;
+	-webkit-justify-content: $content;
+	   -moz-justify-content: $content;
+	  		justify-content: $content;
+}
+@mixin align-items($item){
+	-webkit-box-align: $item;
+  	   -ms-flex-align: $item;
+  -webkit-align-items: $item;
+     -moz-align-items: $item;
+          align-items: $item;
+}
+
 @mixin box-sizing ($sizing) {
     -webkit-box-sizing:$sizing;     
        -moz-box-sizing:$sizing;
             box-sizing:$sizing;
 }
-
-.flx{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
 .box-border{
     border:1px solid #ccc;
     @include box-sizing(border-box);
 }
 
+.flx{
+	@include display;
+}
 .f1{
 	@include flex(1);
-	display: block;
-	padding: 4px 8px;
 }
+.f2{
+	@include flex(2);
+}
+.f3{
+	@include flex(3);
+}
+.f4{
+	@include flex(4);
+}
+.f5{
+	@include flex(5);
+}
+.f20{
+	@include flex(20%);
+}
+.f25{
+	@include flex(25%);
+}
+// 盒子内的元素等比显示，两个元素左右靠边显示，三个元素中间元素居中显示
+.both-lr{
+	@include display;
+	@include align-items(center);
+	@include justify-content(space-between);
+}
+.both-ud{
+	@include display;
+	@include flex-direction(column);
+	@include justify-content(space-between);
+}
+
+// 推荐单列列表
+
+// 推荐两列列表
+
+
+
+
