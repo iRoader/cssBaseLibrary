@@ -1,55 +1,9 @@
 
-@mixin display{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-@mixin flex($num){
-	-webkit-box-flex: $num;
-		-webkit-flex: $num;
-	   -moz-box-flex: $num;
-	       -moz-flex: $num;
-	        -ms-flex: $num;
-				flex: $num;
-}
+@import 'mixin';
 
-@mixin flex-direction($direction){
-	-webkit-flex-direction: $direction;
-  	   -moz-flex-direction: $direction;
-  		-ms-flex-direction: $direction;
-  			flex-direction: $direction;
-}
-@mixin flex-wrap($wrap){
-	  -ms-flex-wrap: $wrap;
-  -webkit-flex-wrap: $wrap;
-          flex-wrap: $wrap;
-}
-@mixin justify-content($content){
-		   -webkit-box-pack: $content;
-		  	  -ms-flex-pack: $content;
-	-webkit-justify-content: $content;
-	   -moz-justify-content: $content;
-	  		justify-content: $content;
-}
-@mixin align-items($item){
-	-webkit-box-align: $item;
-  	   -ms-flex-align: $item;
-  -webkit-align-items: $item;
-     -moz-align-items: $item;
-          align-items: $item;
-}
-
-@mixin box-sizing ($sizing) {
-    -webkit-box-sizing:$sizing;     
-       -moz-box-sizing:$sizing;
-            box-sizing:$sizing;
-}
 .box-border{
     border:1px solid #ccc;
-    @include box-sizing(border-box);
+    @include box_sizing(border-box);
 }
 
 .flx{
@@ -76,6 +30,12 @@
 .f25{
 	@include flex(25%);
 }
+//  水平垂直居中 
+.center-lv{
+	@include justify-content(center);
+	@include align-items(center);
+}
+
 // 盒子内的元素等比显示，两个元素左右靠边显示，三个元素中间元素居中显示
 .both-lr{
 	@include display;

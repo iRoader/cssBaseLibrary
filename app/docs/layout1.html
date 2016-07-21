@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>布局</title>
+	<link rel="stylesheet" href="../dist/css/main.css">
+<style>
+	body{
+		background-color: #e2e2e2 !important;
+	}
+	.main{
+		max-width: 768px;
+		margin: 0 auto;
+	}
+	.flx{
+		/*background-color: #04FB8B;*/
+		margin-top: 8px;
+	}
+	.box{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.box li{
+		text-align: center;
+		position: relative;
+		display: block;
+	}
+	.f20{
+		margin: 16px 2.5%;
+	}
+	.f20 img{
+		display: block;
+		width: 100%;
+		border-radius: 50%;
+	}
+	.showdow{
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,.7);
+		position: absolute;
+	}
+
+	/*.item{
+		padding: 16px;
+		background-color: #fff;
+		margin: 8px auto;
+	}*/
+	.list-title{
+		line-height: 1.4;
+	}
+	.list-title span {
+	    color: #fff;
+	    width: 24px;
+	    height: 24px;
+	    margin-bottom: 48px;
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    background: #f74c31;
+	    text-align: center;
+	    line-height: 24px;
+	    display: inline-block;
+	    margin-right: 8px;
+	    float: left;
+	}
+	.f1 span, .listen{
+		padding: 0 8px;
+		line-height: 1.7;
+	}
+	.listen{
+		text-align: center;
+		display: block;
+		border: 1px solid #13b7f6;
+		border-radius: 8px;
+		padding: 4px 0.6rem;
+		color: #13b7f6;
+		background: #fff;
+	}
+	img{
+		border-radius: 50%;
+
+	}
+	.icon{
+		width: 64px;
+		height: 64px;
+		padding: 10px;
+		border: 1px solid;
+		border-radius: 50%;
+		display: block;
+		background: red;
+		background: url(img/1.jpg) no-repeat center;
+		background-size: 30px;
+		text-align: center;
+		line-height: 44px;
+	}
+	.icon-sharp-corners:after {
+	    content: " ";
+	    display: inline-block;
+	    -webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    height: .32rem;
+	    width: .32rem;
+	    border-width: 2px 2px 0 0;
+	    border-color: #C8C8CD;
+	    border-style: solid;
+	    position: relative;
+	    top: -2px;
+	    top: -1px;
+	    margin-left: .3em;
+	}
+	.c-list {
+	    display: flex;
+	    width: 100%;
+	    height: 120px;
+	    align-items: center;
+	    justify-content: space-between;
+	    color: #333;
+	    font-size: .426667rem;
+	    padding: .426667rem;
+	    border-bottom: .008052rem solid #b7b6b6;
+	}
+	.class-icon-title {
+	    display: flex;
+	    align-items: center;
+	}
+	li{
+		margin-top: 8px;
+		background-color: #fff;
+	}
+</style>
+</head>
+<body>
+
+	<ul class="list">
+		<li class="item">
+			<i class="icon">火</i>
+			<div class="f1 both-lr">
+				<span class="">新人求翻牌</span>
+				<span>></span>
+			</div>	
+		</li>
+
+		<li class="both-lr c-list">
+			<div class="class-icon-title">
+				<i class="icon">火</i>
+				<span class="c-title">新人求翻牌</span>
+			</div>
+			<i class="icon-sharp-corners"></i>
+		</li>
+	</ul>
+
+
+	<ul class="list">
+		<li class="">
+			<h1 class="list-title"><span>热</span>是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？</h1>
+			<div class="flx mt8">
+				<img src="img/3.jpg" alt="">
+				<div class="f1 both-lr">
+					<div class="both-ud">
+						<span class="">张某某</span>
+						<span class="">央美 | 国画系教授</span>
+					</div>
+					<div class="both-ud">
+						<button class="listen">我要听</button>
+						<span class="">9000人旁听</span>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="both-lr">
+			<span class="">考研自习室</span>
+			<span class="">（xxx人）</span>
+		</li>
+	</ul>
+
+	<!-- <div class="aa center-lv">
+		<p>fjksakfljskd</p>
+	</div> -->
+	
+	
+
+
+
+	<!-- <div class="main">
+		<ul class="flx ">
+			<li class="f1"><img src="img/1.jpg" alt=""></li>
+			<li class="f1"><img src="img/1.jpg" alt=""></li>
+			<li class="f1"><img src="img/1.jpg" alt=""></li>
+			<li class="f1"><img src="img/1.jpg" alt=""></li>
+		</ul>
+
+		<ul class="flx box">
+			<li class="f20">
+				<div class="showdow"></div>
+				<img src="img/1.jpg" alt="">
+				
+			</li>
+			<li class="f20">
+				<div class="showdow"></div>
+				<img src="img/1.jpg" alt="">
+				
+			</li>
+			<li class="f20">
+				<div class="showdow"></div>
+				<img src="img/1.jpg" alt="">
+				
+			</li>
+			<li class="f20">
+				<div class="showdow"></div>
+				<img src="img/1.jpg" alt="">
+				
+			</li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+			<li class="f20"><img src="img/1.jpg" alt=""></li>
+		</ul>
+
+	</div> -->
+	
+	
+</body>
+</html>

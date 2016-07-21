@@ -5,90 +5,280 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>布局</title>
 	<link rel="stylesheet" href="../dist/css/main.css">
+	<!-- <script src="js/setRem.js"></script> -->
 <style>
+	body{
+		background-color: #e2e2e2 !important;
+	}
+	
+	.list-img{
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #fff;
+		overflow: hidden;
+		padding-top: 16px;
+	}
+	.list-img .item{
+		width: 25%;
+		padding: 0 2.5% 16px;
+	}
+	.list-img img{
+		width: 100%;
+		border-radius: 50%;
+	}
+	.list-img a{
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.list-img .shodow{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.7);
+		background-color: #0ff;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 100%;
+		padding: 2.5%;
+	}
+	.list-img .nickname{
+		position: absolute;
+		margin: auto;
+		right: 0;
+		left: 0;
+		bottom: 1rem;
+		width: 80%;
+		text-align: center;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		white-space: nowrap; 
+		overflow: hidden; 
+	}
+
 	.main{
 		max-width: 768px;
 		margin: 0 auto;
 	}
 	.flx{
-		display: flex;
-		margin: 20px auto;
-		background-color: #04FB8B;
+		/*background-color: #04FB8B;*/
+		margin-top: 8px;
 	}
-	.f1{
-		background-color: #DF19E5;
-		margin: 0 8px;
-	}
-	.f1 img{
-		width: 100%;
+	img{
 		border-radius: 50%;
+
 	}
-	.box{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.box li{
+	.icon{
+		width: 64px;
+		height: 64px;
+		padding: 10px;
+		border: 1px solid;
+		border-radius: 50%;
+		display: block;
+		background: red;
+		background: url(img/1.jpg) no-repeat center;
+		background-size: 30px;
 		text-align: center;
-		position: relative;
-		display: block;
+		line-height: 44px;
 	}
-	.f20{
-		margin: 16px 2.5%;
+	.icon-sharp-corners:after {
+	    content: " ";
+	    display: inline-block;
+	    -webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    height: .32rem;
+	    width: .32rem;
+	    border-width: 2px 2px 0 0;
+	    border-color: #C8C8CD;
+	    border-style: solid;
+	    position: relative;
+	    top: -2px;
+	    top: -1px;
+	    margin-left: .3em;
 	}
-	.f20 img{
-		display: block;
-		width: 100%;
-		border-radius: 50%;
+	li{
+		margin-top: 8px;
+		background-color: #fff;
 	}
-	.showdow{
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		background-color: rgba(0,0,0,.7);
-		position: absolute;
+	.card-title{
+		display: flex;
+	}
+	.card-title .hot {
+	    color: #fff;
+	    width: 24px;
+	    height: 24px;
+	    /*margin-bottom: 48px;*/
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    background: #f74c31;
+	    text-align: center;
+	    line-height: 24px;
+	    display: inline-block;
+	    margin: 0 8px;
+	    float: left;
+	}
+	.card-title .title{
+		flex: 1;
+		display: flex;
+    	align-items: center;
 	}
 </style>
 </head>
 <body>
-	<div class="main">
-		<ul class="flx ">
-			<li class="f1"><img src="img/1.png" alt=""></li>
-			<li class="f1"><img src="img/1.png" alt=""></li>
-			<li class="f1"><img src="img/1.png" alt=""></li>
-			<li class="f1"><img src="img/1.png" alt=""></li>
-		</ul>
+	<ul class="list-img">
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#" class="">
+				<img class="" src="img/2.jpg">
+				<p class="shodow"></p>
+				<p class="nickname">❄️冰玉❄️❄️冰玉❄️</p>
+			</a>
+		</li>
+		
+	</ul>
 
-		<ul class="flx box">
-			<li class="f20">
-				<div class="showdow"></div>
-				<img src="img/1.png" alt="">
-				
-			</li>
-			<li class="f20">
-				<div class="showdow"></div>
-				<img src="img/1.png" alt="">
-				
-			</li>
-			<li class="f20">
-				<div class="showdow"></div>
-				<img src="img/1.png" alt="">
-				
-			</li>
-			<li class="f20">
-				<div class="showdow"></div>
-				<img src="img/1.png" alt="">
-				
-			</li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-			<li class="f20"><img src="img/1.png" alt=""></li>
-		</ul>
+	<ul class="list">
+		<li class="card">
+			<div class="card-title">
+				<span class="hot">热</span>
+				<span class="title">是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？</span>
+			</div>
+		</li>
 
-	</div>
+		<li class="flx">
+			<img src="img/3.jpg" alt="">
+			<div class="f1 both-ud">
+				<span class="">谢严坤</span>
+				<span class="">北大 | 校草</span>
+			</div>
+			<div class="f1 both-ud">
+				<span class="">谢严坤</span>
+				<span class="">北大 | 校草</span>
+			</div>
+		</li>
+
+		<li class="item">
+			<img src="img/3.jpg" alt="">
+			<div class="item-note">
+				<div class="both-ud">
+					<span class="">张某某</span>
+					<span class="">央美 | 国画系教授</span>
+				</div>
+				<div class="both-ud">
+					<button class="listen">我要听</button>
+					<span class="">9000人旁听</span>
+				</div>
+			</div>	
+		</li>
+
+		<li class="card">
+			<div class="card-title">
+				<span class="hot">热</span>
+				<span class="title">是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？</span>
+			</div>
+			
+			<div class="f1 both-lr">
+				<img src="img/3.jpg" alt="">
+				<div class="both-ud">
+					<span class="">张某某</span>
+					<span class="">央美 | 国画系教授</span>
+				</div>
+				<div class="both-ud">
+					<button class="listen">我要听</button>
+					<span class="">9000人旁听</span>
+				</div>
+			</div>
+			<!-- <div class="flx">
+				
+			</div> -->
+		</li>
+	</ul>
+
+	<ul class="list">
+		<li class="item">
+			<span class="">新人求翻牌</span>
+			<span>></span>
+		</li>
+
+		<li class="item">
+			<i class="icon">火</i>
+			<div class="item-note">
+				<span class="">新人求翻牌</span>
+				<span>></span>
+			</div>	
+		</li>
+		
+	</ul>
+
+
+
+
+
+<!-- 	<ul class="list">
+
+		<li class="item">
+			<h1 class="list-title"><span>热</span>是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？是天上的星星多还是地上的沙子多？</h1>
+			<div class="flx mt8">
+				<img src="img/3.jpg" alt="">
+				<div class="f1 both-lr">
+					<div class="both-ud">
+						<span class="">张某某</span>
+						<span class="">央美 | 国画系教授</span>
+					</div>
+					<div class="both-ud">
+						<button class="listen">我要听</button>
+						<span class="">9000人旁听</span>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="both-lr">
+			<span class="">考研自习室</span>
+			<span class="">（xxx人）</span>
+		</li>
+	</ul> -->
+
+
 	
 	
 </body>

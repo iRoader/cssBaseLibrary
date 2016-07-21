@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+	.box{
+		width: 200px;
+		height: 100px;
+		background: #0ff;
+	}
+	.box:after{
+		content: 'hello';
+		display: block;
+		width: 100px;
+		height: 50px;
+		background: #f0f;
+	}
+	.box:before{
+		content: 'before';
+		display: block;
+		width: 100px;
+		height: 50px;
+		background: #999;
+	}
+	a:link{
+		color: orange;
+	}
+	a:visited{
+		color: red;
+	}
+	a:hover{
+		color: blue;
+	}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+	<a href="#">这是一个链接link1~~~</a>
+	<a href="#">这是一个链接link2~~~</a>
+	<a href="#">这是一个链接link3~~~</a>
+	<a href="#">这是一个链接link4~~~</a>
+</body>
+</html>

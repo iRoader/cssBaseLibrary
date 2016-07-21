@@ -1,0 +1,49 @@
+// Flexbox layout
+@mixin display{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+@mixin flex($num){
+	-webkit-box-flex: $num;
+		-webkit-flex: $num;
+	   -moz-box-flex: $num;
+	       -moz-flex: $num;
+	        -ms-flex: $num;
+				flex: $num;
+}
+
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+  	   -moz-flex-direction: $direction;
+  		-ms-flex-direction: $direction;
+  			flex-direction: $direction;
+}
+@mixin flex-wrap($wrap){
+	  -ms-flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+@mixin justify-content($content){
+		   -webkit-box-pack: $content;
+		  	  -ms-flex-pack: $content;
+	-webkit-justify-content: $content;
+	   -moz-justify-content: $content;
+	  		justify-content: $content;
+}
+@mixin align-items($item){
+	-webkit-box-align: $item;
+  	   -ms-flex-align: $item;
+  -webkit-align-items: $item;
+     -moz-align-items: $item;
+          align-items: $item;
+}
+
+@mixin box_sizing ($sizing) {
+    -webkit-box-sizing:$sizing;     
+       -moz-box-sizing:$sizing;
+            box-sizing:$sizing;
+}

@@ -2,54 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" href="../dist/css/main.css">
-	<!-- <link rel="stylesheet" href="../sass/_reset.css"> -->
-<style>
+	<title>Document</title>
 
-	h1{
-		font-size: 36px;
+<script type="text/javascript">
+	function allowDrop(ev){
+		ev.preventDefault();
 	}
-	.flx{
-		display: flex;
-		width: 80%;
-		height: 400px;
-		margin: 20px auto;
-		background-color: red;
+
+	function drag(ev){
+		ev.dataTransfer.setData("Text",ev.target.id);
 	}
-	.f1{
-		background-color: #DF19E5;
-		height: 100%;
-		margin: 0 8px;
-		
+
+	function drop(ev){
+		ev.preventDefault();
+		var data=ev.dataTransfer.getData("Text");
+		ev.target.appendChild(document.getElementById(data));
 	}
-	.f1 img{
-		width: 100%;
-		border-radius: 50%;
-	}
-	.f2{
-		/*width: 200px;*/
-		width: 25%;
-		height: 20px;
-		background-color: #327CD9;
-		margin: 0 20px;
-	}
-	.f3{
-		/*width: 200px;*/
-		width: 25%;
-		height: 20px;
-		background-color: #75D33B;
-	}
-</style>
+</script>
 </head>
 <body>
-	
-	<ul class="flx">
-		<li class="f1"><img src="img/1.png" alt=""></li>
-		<li class="f1"><img src="img/1.png" alt=""></li>
-		<li class="f1"><img src="img/1.png" alt=""></li>
-		<li class="f1"><img src="img/1.png" alt=""></li>
-	</ul>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69" />
 
 </body>
 </html>
